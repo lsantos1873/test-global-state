@@ -1,12 +1,9 @@
-import shallow from "zustand/shallow";
 import useUsers from "../../stores";
 
 const Component3B: React.FC = () => {
   console.log("COMPONENT 3B - rendered");
 
-  const { users } = useUsers((state) => ({
-    users: state.users,
-  }), shallow);
+  const users = useUsers((state) => state.users);
 
   return (
     <div>
